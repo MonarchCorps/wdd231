@@ -4,109 +4,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attributions - Naija Food Hub</title>
+    <title>Attributions & Credits - Naija Food Hub</title>
     <meta name="description" content="Attribution and credits for content used in Naija Food Hub website.">
     <meta name="author" content="David Okocha">
+
+    <meta property="og:title" content="Naija Food Hub - Source Attributions & Credits">
+    <meta property="og:description"
+        content="Credits and attributions for images, fonts, data sources, and technologies used in building Naija Food Hub.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://monarchcorps.github.io/wdd231/final/attributions.html">
+    <meta property="og:image" content="https://monarchcorps.github.io/wdd231/final/images/jollof_rice.webp">
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
     <link rel="stylesheet" href="styles/attributions.css">
+
+    <script src="scripts/main.js" type="module" defer></script>
 </head>
 
 <body>
-    <h1>Attributions & Credits</h1>
-    <p><strong>Naija Food Hub</strong> - WDD 231 Final Project by David Okocha</p>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>🇳🇬 Naija Food Hub</h1>
+                <p class="tagline">Taste of Nigeria</p>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
 
-    <div class="section">
-        <h2>🖼️ Images</h2>
-        <p>All recipe images are sourced from <strong>Unsplash</strong>, a free stock photo service:</p>
-        <ul>
-            <li><a href="https://unsplash.com" target="_blank">Unsplash</a> - Free high-quality images</li>
-            <li>Individual photographers are credited in the image URLs</li>
-            <li>All images are used under the <a href="https://unsplash.com/license" target="_blank">Unsplash
-                    License</a></li>
+    <nav id="nav">
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="attributions.html" class="active" aria-current="page">Attributions</a></li>
         </ul>
-    </div>
+    </nav>
 
-    <div class="section">
-        <h2>🎨 Design & Fonts</h2>
-        <ul>
-            <li><strong>Google Fonts</strong>
-                <ul>
-                    <li><a href="https://fonts.google.com/specimen/Merriweather" target="_blank">Merriweather</a> -
-                        Serif font for headings</li>
-                    <li><a href="https://fonts.google.com/specimen/Roboto" target="_blank">Roboto</a> - Sans-serif font
-                        for body text</li>
-                </ul>
-            </li>
-            <li><strong>Color Scheme</strong> - Inspired by the Nigerian flag colors (green and white) with amber
-                accents</li>
-            <li><strong>Emojis</strong> - Native system emojis for visual enhancements</li>
-        </ul>
-    </div>
+    <main>
+        <div class="attributions-header">
+            <h2>Attributions &amp; Credits</h2>
+            <p><strong>Naija Food Hub</strong> &mdash; WDD 231 Final Project by David Okocha</p>
+        </div>
 
-    <div class="section">
-        <h2>📊 Data Sources</h2>
-        <ul>
-            <li><strong>TheMealDB API</strong> - <a href="https://www.themealdb.com"
-                    target="_blank">www.themealdb.com</a>
-                <ul>
-                    <li>Free public API for recipe data</li>
-                    <li>Used as primary data source with local fallback</li>
-                </ul>
-            </li>
-            <li><strong>Recipe Content</strong> - Original descriptions and ingredient lists compiled from:
-                <ul>
-                    <li>Nigerian culinary traditions and common knowledge</li>
-                    <li>Various Nigerian food blogs and cooking resources</li>
-                    <li>Personal knowledge of Nigerian cuisine</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+        <div class="attribution-section">
+            <h3>Images</h3>
+            <p>All recipe images are sourced from <strong>Unsplash</strong>, a free stock photo service:</p>
+            <ul>
+                <li><a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> &mdash; Free high-quality images</li>
+                <li>Individual photographers are credited in the image URLs</li>
+                <li>All images are used under the <a href="https://unsplash.com/license" target="_blank" rel="noopener">Unsplash License</a></li>
+            </ul>
+        </div>
 
-    <div class="section">
-        <h2>💻 Technologies & Resources</h2>
-        <ul>
-            <li><strong>HTML5</strong> - Semantic markup structure</li>
-            <li><strong>CSS3</strong> - Styling and responsive design</li>
-            <li><strong>JavaScript (ES6+)</strong> - Dynamic functionality and interactivity</li>
-            <li><strong>Fetch API</strong> - Asynchronous data retrieval</li>
-            <li><strong>Local Storage API</strong> - Client-side data persistence</li>
-            <li><strong>GitHub Pages</strong> - Web hosting platform</li>
-        </ul>
-    </div>
+        <div class="attribution-section">
+            <h3>Design &amp; Fonts</h3>
+            <ul>
+                <li><strong>Google Fonts</strong>
+                    <ul>
+                        <li><a href="https://fonts.google.com/specimen/Merriweather" target="_blank" rel="noopener">Merriweather</a> &mdash; Serif font for headings</li>
+                        <li><a href="https://fonts.google.com/specimen/Roboto" target="_blank" rel="noopener">Roboto</a> &mdash; Sans-serif font for body text</li>
+                    </ul>
+                </li>
+                <li><strong>Color Scheme</strong> &mdash; Inspired by the Nigerian flag colors (green and white) with amber accents</li>
+                <li><strong>Emojis</strong> &mdash; Native system emojis for visual enhancements</li>
+            </ul>
+        </div>
 
-    <div class="section">
-        <h2>📚 Educational Resources</h2>
-        <ul>
-            <li><strong>BYU-Idaho WDD 231 Course</strong> - Web Frontend Development</li>
-            <li><strong>MDN Web Docs</strong> - <a href="https://developer.mozilla.org"
-                    target="_blank">developer.mozilla.org</a></li>
-            <li><strong>W3C Standards</strong> - Web accessibility and standards guidelines</li>
-        </ul>
-    </div>
+        <div class="attribution-section">
+            <h3>Data Sources</h3>
+            <ul>
+                <li><strong>TheMealDB API</strong> &mdash; <a href="https://www.themealdb.com" target="_blank" rel="noopener">www.themealdb.com</a>
+                    <ul>
+                        <li>Free public API for recipe data</li>
+                        <li>Used as primary data source with local fallback</li>
+                    </ul>
+                </li>
+                <li><strong>Recipe Content</strong> &mdash; Original descriptions and ingredient lists compiled from:
+                    <ul>
+                        <li>Nigerian culinary traditions and common knowledge</li>
+                        <li>Various Nigerian food blogs and cooking resources</li>
+                        <li>Personal knowledge of Nigerian cuisine</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
-    <div class="section">
-        <h2>🍛 Cultural Content</h2>
-        <p>All information about Nigerian cuisine, dishes, and cooking traditions is based on:</p>
-        <ul>
-            <li>Nigerian cultural heritage and common knowledge</li>
-            <li>Traditional recipes passed down through generations</li>
-            <li>Regional variations across Nigeria (Northern, Southern, Eastern, Western, South-South)</li>
-            <li>Contemporary Nigerian cooking practices</li>
-        </ul>
-        <p><strong>Note:</strong> This website is created for educational purposes as part of a web development course
-            project.</p>
-    </div>
+        <div class="attribution-section">
+            <h3>Technologies &amp; Resources</h3>
+            <ul>
+                <li><strong>HTML5</strong> &mdash; Semantic markup structure</li>
+                <li><strong>CSS3</strong> &mdash; Styling and responsive design</li>
+                <li><strong>JavaScript (ES6+)</strong> &mdash; Dynamic functionality and interactivity</li>
+                <li><strong>Fetch API</strong> &mdash; Asynchronous data retrieval</li>
+                <li><strong>Local Storage API</strong> &mdash; Client-side data persistence</li>
+                <li><strong>GitHub Pages</strong> &mdash; Web hosting platform</li>
+            </ul>
+        </div>
 
-    <div class="section">
-        <h2>⚖️ License & Usage</h2>
-        <p>This website was created as a student project for WDD 231 at BYU-Idaho. All original content is &copy; 2026
-            David Okocha.</p>
-        <p>Third-party content is used according to their respective licenses and attributions listed above.</p>
-    </div>
+        <div class="attribution-section">
+            <h3>Educational Resources</h3>
+            <ul>
+                <li><strong>BYU-Idaho WDD 231 Course</strong> &mdash; Web Frontend Development</li>
+                <li><strong>MDN Web Docs</strong> &mdash; <a href="https://developer.mozilla.org" target="_blank" rel="noopener">developer.mozilla.org</a></li>
+                <li><strong>W3C Standards</strong> &mdash; Web accessibility and standards guidelines</li>
+            </ul>
+        </div>
+
+        <div class="attribution-section">
+            <h3>Cultural Content</h3>
+            <p>All information about Nigerian cuisine, dishes, and cooking traditions is based on:</p>
+            <ul>
+                <li>Nigerian cultural heritage and common knowledge</li>
+                <li>Traditional recipes passed down through generations</li>
+                <li>Regional variations across Nigeria (Northern, Southern, Eastern, Western, South-South)</li>
+                <li>Contemporary Nigerian cooking practices</li>
+            </ul>
+            <p><strong>Note:</strong> This website is created for educational purposes as part of a web development course project.</p>
+        </div>
+
+        <div class="attribution-section">
+            <h3>License &amp; Usage</h3>
+            <p>This website was created as a student project for WDD 231 at BYU-Idaho. All original content is &copy; 2026 David Okocha.</p>
+            <p>Third-party content is used according to their respective licenses and attributions listed above.</p>
+        </div>
+    </main>
 
     <footer>
-        <p><a href="index.html">← Back to Home</a></p>
-        <p>&copy; 2026 Naija Food Hub | David Okocha | WDD 231 Final Project</p>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Naija Food Hub</h3>
+                <p>Bringing authentic Nigerian cuisine to the world</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="siteplan.html">Site Plan</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentyear"></span> Naija Food Hub | David Okocha | WDD 231 Final Project</p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
 </body>
 

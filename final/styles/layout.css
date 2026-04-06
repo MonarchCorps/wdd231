@@ -45,6 +45,12 @@ nav {
     padding: 0;
     max-width: var(--max-width-xl);
     margin: 0 auto;
+    display: none;
+    flex-direction: column;
+}
+
+.nav-menu.active {
+    display: flex;
 }
 
 .nav-menu li {
