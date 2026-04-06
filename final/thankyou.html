@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Naija Food Hub</title>
+    <meta name="description" content="Thank you for contacting Naija Food Hub. We've received your message and will respond shortly.">
+    <meta name="author" content="David Okocha">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>🇳🇬 Naija Food Hub</h1>
+                <p class="tagline">Taste of Nigeria</p>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav id="nav">
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="thankyou-section">
+            <div class="thankyou-container">
+                <div class="success-icon">✓</div>
+                <h2>Thank You!</h2>
+                <p class="thankyou-message">We've received your message and will get back to you soon.</p>
+                
+                <div class="submission-details" id="submission-details">
+                    <h3>Your Submission Details:</h3>
+                    <div id="form-data">
+                        <!-- Dynamically populated from URL parameters -->
+                    </div>
+                </div>
+
+                <div class="next-steps">
+                    <h3>What's Next?</h3>
+                    <ul>
+                        <li>We'll review your message within 24-48 hours</li>
+                        <li>You'll receive a response at the email address you provided</li>
+                        <li>Feel free to explore more recipes while you wait!</li>
+                    </ul>
+                </div>
+
+                <div class="thankyou-actions">
+                    <a href="index.html" class="cta-button">Return Home</a>
+                    <a href="recipes.html" class="secondary-button">Browse Recipes</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Naija Food Hub</h3>
+                <p>Bringing authentic Nigerian cuisine to the world</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#video" id="video-link">Video Demo</a></li>
+                    <li><a href="siteplan.html">Site Plan</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentyear"></span> Naija Food Hub | David Okocha | WDD 231 Final Project</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js" type="module"></script>
+</body>
+</html>

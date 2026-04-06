@@ -1,0 +1,269 @@
+
+
+@media screen and (min-width: 768px) {
+
+    /* Header + nav on the same row */
+    .top-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+    }
+
+    .site-header {
+        flex-shrink: 0;
+        padding: 10px 8px;
+        box-shadow: none;
+    }
+
+    .header-brand img,
+    .header-logo {
+        width: 52px;
+        height: 52px;
+    }
+
+    .brand-name {
+        font-size: 1.1rem;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .main-nav {
+        max-height: none;
+        overflow: visible;
+        background-color: transparent;
+        flex: 1;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 0;
+        padding: 0;
+    }
+
+    .nav-list li a {
+        padding: 18px 18px;
+        font-size: 0.95rem;
+        border-left: none;
+    }
+
+    .nav-list li a[aria-current="page"] {
+        border-left: none;
+        border-bottom: 3px solid var(--accent-color);
+        font-weight: 700;
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .directory-hero {
+        padding: 48px 32px;
+    }
+
+    .directory-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .directory-hero p {
+        font-size: 1.1rem;
+    }
+
+    .directory-section {
+        padding: 28px 32px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .members-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 24px;
+    }
+
+    .card-name {
+        font-size: 1.1rem;
+    }
+
+    .member-list-item {
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+
+    .list-name {
+        font-size: 1rem;
+        flex: 0 0 220px;
+    }
+
+    .list-phone {
+        flex: 0 0 180px;
+    }
+
+    .list-url {
+        flex: 1;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 32px;
+        padding: 0 32px;
+    }
+
+    .footer-social {
+        flex-direction: row;
+        gap: 12px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+        gap: 30px;
+        padding: 40px 32px;
+    }
+
+    .hero-section {
+        grid-column: 1 / -1;
+    }
+
+    .hero-img {
+        height: 450px;
+    }
+
+    .hero-cta h1 {
+        font-size: 3rem;
+    }
+
+    .hero-cta p {
+        font-size: 1.25rem;
+    }
+
+    .events-section {
+        grid-column: 1 / 2;
+    }
+
+    .weather-section {
+        grid-column: 2 / 3;
+    }
+
+    .spotlights-section {
+        grid-column: 3 / 4;
+    }
+
+    .spotlights-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .members-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .directory-section {
+        padding: 36px 48px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .join-layout {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 36px;
+        padding: 36px 32px;
+    }
+
+    /* Form takes ~55% of the width */
+    .form-section {
+        flex: 0 0 55%;
+        max-width: 55%;
+    }
+
+    /* Cards fill the remaining space */
+    .membership-cards-section {
+        flex: 1;
+    }
+
+    .membership-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .thankyou-actions {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .btn-secondary,
+    .thankyou-actions .cta-button {
+        width: auto;
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .join-hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .membership-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width: 641px) {
+
+    .discover-hero {
+        padding: 52px 32px 40px;
+    }
+
+    .discover-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .discover-hero p {
+        font-size: 1.1rem;
+    }
+
+    .discover-section {
+        padding: 32px 32px;
+    }
+
+    .discover-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card-a card-a"
+            "card-b card-c"
+            "card-d card-d"
+            "card-e card-f"
+            "card-g card-h";
+    }
+
+    .discover-card figure img {
+        transition: transform 0.35s ease, filter 0.35s ease;
+    }
+
+    .discover-card figure img:hover {
+        transform: scale(1.07);
+        filter: brightness(1.1) saturate(1.15);
+    }
+}
+
+@media screen and (min-width: 1025px) {
+
+    .discover-section {
+        padding: 40px 48px;
+    }
+
+    .discover-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "card-a card-a card-b"
+            "card-c card-d card-b"
+            "card-e card-e card-e"
+            "card-f card-g card-h";
+        gap: 24px;
+    }
+}

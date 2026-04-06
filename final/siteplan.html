@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naija Food Hub — Site Plan</title>
+    <meta name="description"
+        content="Site plan for Naija Food Hub, a Nigerian cuisine discovery website by David Okocha.">
+    <meta name="author" content="David Okocha">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&amp;family=Roboto:wght@400;700&amp;display=swap">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&amp;family=Roboto:wght@400;700&amp;display=swap">
+    </noscript>
+    <style>
+        :root {
+            --green: #008751;
+            --navy: #003366;
+            --amber: #E8A020;
+            --bg: #F9F9F7;
+            --text: #1A1A1A;
+            --white: #ffffff;
+            --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background-color: var(--green);
+            color: var(--white);
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2rem;
+            margin-bottom: 0.25rem;
+        }
+
+        header p {
+            font-size: 1rem;
+        }
+
+        nav {
+            background-color: var(--navy);
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            padding: 0.75rem 1rem;
+            gap: 0.5rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 0.4rem 0.9rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+
+        nav a:hover {
+            background-color: var(--amber);
+            color: var(--text);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--card-shadow);
+        }
+
+        h2 {
+            font-family: 'Merriweather', serif;
+            color: var(--green);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--amber);
+        }
+
+        h3 {
+            font-family: 'Merriweather', serif;
+            color: var(--navy);
+            font-size: 1.1rem;
+            margin: 1.25rem 0 0.5rem;
+        }
+
+        p {
+            margin-bottom: 0.75rem;
+        }
+
+        ul,
+        ol {
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* Color swatches */
+        .color-palette {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .swatch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .swatch-box {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+        }
+
+        .swatch p {
+            font-size: 0.8rem;
+            text-align: center;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .swatch small {
+            font-size: 0.75rem;
+            color: #555;
+        }
+
+        /* Typography preview */
+        .font-preview {
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1rem;
+            background-color: var(--bg);
+        }
+
+        .font-preview .label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #595959;
+            margin-bottom: 0.4rem;
+        }
+
+        .font-preview .sample-heading {
+            font-family: 'Merriweather', serif;
+            font-size: 1.6rem;
+            color: var(--navy);
+        }
+
+        .font-preview .sample-body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            color: var(--text);
+        }
+
+        /* Wireframe */
+        .wireframe-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .wireframe-box {
+            border: 2px solid var(--navy);
+            border-radius: 6px;
+            padding: 0.75rem;
+            background-color: var(--bg);
+        }
+
+        .wireframe-box h3 {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+            margin-top: 0;
+        }
+
+        .wf-block {
+            background-color: #d0e8d8;
+            border: 1px solid var(--green);
+            border-radius: 4px;
+            padding: 0.4rem 0.6rem;
+            font-size: 0.75rem;
+            text-align: center;
+            margin-bottom: 0.4rem;
+            color: var(--navy);
+            font-weight: 700;
+        }
+
+        .wf-block.dark {
+            background-color: var(--navy);
+            color: var(--white);
+            border-color: var(--navy);
+        }
+
+        .wf-block.amber {
+            background-color: var(--amber);
+            color: var(--text);
+            border-color: #c07a00;
+        }
+
+        .wf-block.light {
+            background-color: #e8e8e4;
+            border-color: #bbb;
+        }
+
+        .wf-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.3rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .wf-cards.two {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .wf-card {
+            background-color: #e8e8e4;
+            border: 1px solid #bbb;
+            border-radius: 3px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+            color: #555;
+        }
+
+        /* Scenarios */
+        .scenario {
+            background-color: #eef6f0;
+            border-left: 4px solid var(--green);
+            border-radius: 0 6px 6px 0;
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.75rem;
+            font-style: italic;
+        }
+
+        /* Pages table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background-color: var(--navy);
+            color: var(--white);
+            padding: 0.6rem 0.75rem;
+            text-align: left;
+        }
+
+        td {
+            padding: 0.6rem 0.75rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f0f0ed;
+        }
+
+        /* JS features */
+        .feature-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+        }
+
+        .feature-item {
+            background-color: #ffffff;
+            border: 1px solid #b0d4b8;
+            border-radius: 6px;
+            padding: 0.75rem 1rem;
+        }
+
+        .feature-item strong {
+            display: block;
+            color: var(--green);
+            margin-bottom: 0.25rem;
+            font-size: 0.85rem;
+        }
+
+        .feature-item span {
+            font-size: 0.82rem;
+            color: #444;
+        }
+
+        footer {
+            background-color: var(--navy);
+            color: var(--white);
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.85rem;
+        }
+
+        footer p {
+            margin-bottom: 0.25rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.4rem;
+            }
+
+            .wireframe-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .wf-cards {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Naija Food Hub — Site Plan</h1>
+        <p>WDD 231 Individual Project &bull; David Okocha</p>
+    </header>
+
+    <nav aria-label="Site plan sections">
+        <ul>
+            <li><a href="#site-name">Site Name</a></li>
+            <li><a href="#purpose">Purpose</a></li>
+            <li><a href="#scenarios">Scenarios</a></li>
+            <li><a href="#colors">Colors</a></li>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#wireframe">Wireframe</a></li>
+            <li><a href="#pages">Pages</a></li>
+            <li><a href="#javascript">JavaScript</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- SITE NAME -->
+        <section id="site-name">
+            <h2>Site Name</h2>
+            <h3>Naija Food Hub</h3>
+            <p>
+                "Naija" is the widely recognized, affectionate informal name Nigerians use for their country. Pairing it
+                with "Food Hub" positions the site as the central destination for discovering, exploring, and
+                celebrating
+                Nigerian cuisine — authentic, culturally grounded, and instantly recognizable to both the diaspora and
+                international food enthusiasts.
+            </p>
+            <p><strong>Optional domain:</strong> naijafoodhub.com</p>
+        </section>
+
+        <!-- PURPOSE -->
+        <section id="purpose">
+            <h2>Site Purpose</h2>
+            <p>
+                Naija Food Hub is a dynamic, interactive culinary guide that celebrates the rich diversity of Nigerian
+                cuisine across all six geopolitical zones. The site provides:
+            </p>
+            <ul>
+                <li>A browsable and filterable database of 15+ authentic Nigerian dishes, each with regional origin,
+                    key ingredients, preparation notes, and cultural context.</li>
+                <li>A regional cuisine explorer that lets users discover food traditions from South West, South East,
+                    South South, North Central, North East, and North West Nigeria.</li>
+                <li>A food culture page covering Nigerian dining etiquette, food festivals, and the stories behind
+                    iconic dishes.</li>
+                <li>A newsletter signup form for users who want updates or to contribute a recipe.</li>
+            </ul>
+        </section>
+
+        <!-- SCENARIOS -->
+        <section id="scenarios">
+            <h2>Scenarios</h2>
+            <p>These questions represent the target audience: food enthusiasts, Nigerian diaspora members, travelers,
+                and culinary students.</p>
+
+            <div class="scenario">
+                "What are the most popular Nigerian dishes I should try if I'm visiting Lagos for the first time?"
+            </div>
+            <div class="scenario">
+                "I want to cook Nigerian food at home — what ingredients are essential, and which dish is best for a
+                beginner?"
+            </div>
+            <div class="scenario">
+                "How does food culture differ between Yoruba, Igbo, and Hausa traditions in Nigeria?"
+            </div>
+        </section>
+
+        <!-- COLOR SCHEME -->
+        <section id="colors">
+            <h2>Color Scheme</h2>
+            <p>The palette is inspired by the Nigerian flag and the warm, vibrant colors of Nigerian markets and
+                cuisine. All pairings meet WCAG AA contrast ratio standards.</p>
+
+            <div class="color-palette">
+                <div class="swatch">
+                    <div class="swatch-box" style="background-color: #008751;"></div>
+                    <p>Nigerian Green</p>
+                    <small>#008751</small>
+                    <small>Nav, buttons, headings</small>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-box" style="background-color: #003366;"></div>
+                    <p>Deep Navy</p>
+                    <small>#003366</small>
+                    <small>Footer, subheadings</small>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-box" style="background-color: #E8A020;"></div>
+                    <p>Amber Gold</p>
+                    <small>#E8A020</small>
+                    <small>CTAs, highlights, borders</small>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-box" style="background-color: #F9F9F7; border: 2px solid #ccc;"></div>
+                    <p>Warm White</p>
+                    <small>#F9F9F7</small>
+                    <small>Page & card backgrounds</small>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-box" style="background-color: #1A1A1A;"></div>
+                    <p>Dark Charcoal</p>
+                    <small>#1A1A1A</small>
+                    <small>Body text, captions</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- TYPOGRAPHY -->
+        <section id="typography">
+            <h2>Typography</h2>
+
+            <div class="font-preview">
+                <p class="label">Merriweather — Serif &bull; Used for: h1, h2, h3, pull quotes</p>
+                <p class="sample-heading">Discover the Richest Flavors of Nigeria</p>
+            </div>
+
+            <div class="font-preview">
+                <p class="label">Roboto — Sans-serif &bull; Used for: body text, navigation, card descriptions, form
+                    labels, captions</p>
+                <p class="sample-body">Jollof Rice is a beloved one-pot tomato-based rice dish, widely regarded as the
+                    crown jewel of West African cuisine. Served at celebrations, family gatherings, and everyday meals.
+                </p>
+            </div>
+
+            <p>Both fonts are loaded via Google Fonts. Merriweather brings a rich editorial quality appropriate for
+                cultural storytelling; Roboto provides clean readability for data-dense content like ingredient lists.
+            </p>
+        </section>
+
+        <!-- WIREFRAME -->
+        <section id="wireframe">
+            <h2>Wireframe — Home Page</h2>
+
+            <div class="wireframe-grid">
+
+                <!-- Mobile -->
+                <div class="wireframe-box">
+                    <h3>Mobile (320px – 480px)</h3>
+                    <div class="wf-block dark">☰ &nbsp; Naija Food Hub</div>
+                    <div class="wf-block" style="height:70px; line-height:1.2; background:#c8e6c9;">
+                        HERO BANNER<br>
+                        <small>"Discover Nigeria's Richest Flavors"</small>
+                    </div>
+                    <div class="wf-block amber">[Explore Dishes ▶]</div>
+                    <div class="wf-block light">Filter: [All] [SW] [SE] [N]</div>
+                    <div class="wf-cards two">
+                        <div class="wf-card">Dish Card</div>
+                        <div class="wf-card">Dish Card</div>
+                        <div class="wf-card">Dish Card</div>
+                        <div class="wf-card">Dish Card</div>
+                    </div>
+                    <div class="wf-block light">Newsletter Signup</div>
+                    <div class="wf-block dark">Footer</div>
+                </div>
+
+                <!-- Desktop -->
+                <div class="wireframe-box">
+                    <h3>Desktop / Tablet (768px+)</h3>
+                    <div class="wf-block dark">Logo &nbsp;|&nbsp; Home &nbsp; Recipes &nbsp; Culture &nbsp; Contact
+                    </div>
+                    <div class="wf-block" style="height:70px; line-height:1.2; background:#c8e6c9;">
+                        HERO BANNER — Full width<br>
+                        <small>"Discover the Richest Flavors of Nigeria"</small>
+                    </div>
+                    <div style="display:grid; grid-template-columns: 1fr 3fr; gap:0.3rem; margin-bottom:0.4rem;">
+                        <div>
+                            <div class="wf-block light"
+                                style="font-size:0.65rem; height:110px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:4px;">
+                                <span>Filter Panel</span>
+                                <small>Region</small>
+                                <small>Search</small>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="wf-cards">
+                                <div class="wf-card">Card</div>
+                                <div class="wf-card">Card</div>
+                                <div class="wf-card">Card</div>
+                                <div class="wf-card">Card</div>
+                                <div class="wf-card">Card</div>
+                                <div class="wf-card">Card</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wf-block amber">Culture Banner &nbsp;[Learn More →]</div>
+                    <div class="wf-block dark">Footer &nbsp;|&nbsp; Attributions &nbsp;|&nbsp; Video</div>
+                </div>
+
+            </div>
+
+            <!-- Modal wireframe -->
+            <h3 style="margin-top:1.5rem;">Modal Dialog — Dish Detail</h3>
+            <div
+                style="max-width: 380px; border: 2px solid var(--navy); border-radius: 8px; padding: 1rem; margin-top: 0.75rem; background: var(--bg);">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+                    <strong style="font-family:'Merriweather',serif; color:var(--navy);">Jollof Rice</strong>
+                    <span style="cursor:pointer; color:#595959;">[✕]</span>
+                </div>
+                <div class="wf-block light" style="height:80px; margin-bottom:0.5rem;">Dish Image</div>
+                <div style="font-size:0.8rem; color:#555;">
+                    <p><strong>Region:</strong> South West Nigeria</p>
+                    <p><strong>Difficulty:</strong> ★★★☆☆ Medium</p>
+                    <p><strong>Description:</strong> A one-pot tomato-based rice dish...</p>
+                    <p><strong>Key Ingredients:</strong> Rice, tomatoes, scotch bonnet, onions...</p>
+                </div>
+                <div style="margin-top:0.75rem; display:flex; gap:0.5rem;">
+                    <div class="wf-block amber" style="flex:1; margin:0; font-size:0.7rem;">[Save to Favorites ♡]</div>
+                    <div class="wf-block light" style="flex:1; margin:0; font-size:0.7rem;">[Close]</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGES -->
+        <section id="pages">
+            <h2>Three-Page Structure</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>File</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Home</strong></td>
+                        <td>index.html</td>
+                        <td>Hero section, featured dishes grid (loaded dynamically from JSON), region filter buttons,
+                            newsletter CTA</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Recipes</strong></td>
+                        <td>recipes.html</td>
+                        <td>Full filterable dish database (15+ items), search input, sort options, modal detail view for
+                            each dish</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Culture</strong></td>
+                        <td>culture.html</td>
+                        <td>Articles on Nigerian food culture, regional cuisine traditions, food festivals, and dining
+                            etiquette</td>
+                    </tr>
+                    <tr>
+                        <td><em>Form Action</em></td>
+                        <td>subscribe.html</td>
+                        <td>Thank-you confirmation page displaying submitted newsletter data (does not count toward
+                            3-page requirement)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- JAVASCRIPT -->
+        <section id="javascript">
+            <h2>JavaScript Feature Plan</h2>
+
+            <div class="feature-list">
+                <div class="feature-item">
+                    <strong>Data Fetching (Fetch API + try/catch)</strong>
+                    <span>Load <code>dishes.json</code> with <code>fetch()</code> wrapped in <code>try...catch</code>
+                        for robust error handling and JSON parsing.</span>
+                </div>
+                <div class="feature-item">
+                    <strong>Dynamic Content (15+ items, 4+ properties)</strong>
+                    <span>Generate dish cards displaying: name, region, description, difficulty rating, and image from
+                        the data source.</span>
+                </div>
+                <div class="feature-item">
+                    <strong>Local Storage</strong>
+                    <span>Save and retrieve the user's favorited dishes so preferences persist across page
+                        visits.</span>
+                </div>
+                <div class="feature-item">
+                    <strong>Modal Dialog</strong>
+                    <span>Accessible dish-detail modal with open/close controls, keyboard trap (Tab/Esc), and ARIA
+                        attributes.</span>
+                </div>
+                <div class="feature-item">
+                    <strong>DOM Manipulation &amp; Events</strong>
+                    <span>Filter buttons, search input, modal triggers, favorites toggle — all via
+                        <code>querySelector</code>, <code>addEventListener</code>.</span>
+                </div>
+                <div class="feature-item">
+                    <strong>Array Methods</strong>
+                    <span><code>filter()</code> for region/search filtering, <code>map()</code> for card generation,
+                        <code>reduce()</code> for favorites count.</span>
+                </div>
+                <div class="feature-item">
+                    <strong>Template Literals</strong>
+                    <span>All card HTML and modal content constructed using template literals for clean, dynamic string
+                        building.</span>
+                </div>
+                <div class="feature-item">
+                    <strong>ES Modules</strong>
+                    <span>Code split into <code>dishes.js</code>, <code>modal.js</code>, <code>favorites.js</code>, and
+                        <code>ui.js</code> modules with explicit imports/exports.</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> David Okocha &bull; WDD 231 Individual Project</p>
+        <p>Naija Food Hub Site Plan</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>

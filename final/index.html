@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naija Food Hub - Discover Authentic Nigerian Cuisine</title>
+    <meta name="description" content="Explore authentic Nigerian recipes, from Jollof Rice to Egusi Soup. Discover the rich flavors of West African cuisine with detailed recipes and cooking tips.">
+    <meta name="author" content="David Okocha">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Naija Food Hub - Discover Authentic Nigerian Cuisine">
+    <meta property="og:description" content="Explore authentic Nigerian recipes, from Jollof Rice to Egusi Soup. Discover the rich flavors of West African cuisine.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://monarchcorps.github.io/wdd231/final/">
+    <meta property="og:image" content="https://monarchcorps.github.io/wdd231/final/images/jollof_rice.webp">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Naija Food Hub - Discover Authentic Nigerian Cuisine">
+    <meta name="twitter:description" content="Explore authentic Nigerian recipes, from Jollof Rice to Egusi Soup.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>🇳🇬 Naija Food Hub</h1>
+                <p class="tagline">Taste of Nigeria</p>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav id="nav">
+        <ul class="nav-menu">
+            <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Experience the Rich Flavors of Nigeria</h2>
+                <p>From the iconic Jollof Rice to hearty Egusi Soup, explore authentic recipes that bring West African cuisine to your kitchen.</p>
+                <a href="recipes.html" class="cta-button">Explore Recipes</a>
+            </div>
+        </section>
+
+        <section class="featured">
+            <h2>Featured Dishes</h2>
+            <div class="featured-grid" id="featured-dishes">
+                <!-- Dynamically loaded featured dishes -->
+            </div>
+        </section>
+
+        <section class="categories">
+            <h2>Browse by Category</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <h3>🍲 Soups</h3>
+                    <p>Rich, hearty soups like Egusi, Efo Riro, and Pepper Soup</p>
+                    <a href="recipes.html?category=Soup" class="category-link">View Soups →</a>
+                </div>
+                <div class="category-card">
+                    <h3>🍛 Main Courses</h3>
+                    <p>Jollof Rice, Fried Rice, and Ofada Rice specialties</p>
+                    <a href="recipes.html?category=Main%20Course" class="category-link">View Main Courses →</a>
+                </div>
+                <div class="category-card">
+                    <h3>🍢 Street Food</h3>
+                    <p>Popular street favorites like Suya, Akara, and Puff Puff</p>
+                    <a href="recipes.html?category=Street%20Food" class="category-link">View Street Food →</a>
+                </div>
+                <div class="category-card">
+                    <h3>🥘 Sides & Snacks</h3>
+                    <p>Moi Moi, Chin Chin, Gizdodo, and more</p>
+                    <a href="recipes.html?category=Side%20Dish" class="category-link">View Sides →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <h2>About Nigerian Cuisine</h2>
+            <div class="about-content">
+                <p>Nigerian cuisine is as diverse as its people, with each region offering unique flavors and cooking techniques. From the spicy dishes of the North to the rich, palm oil-based soups of the South, Nigerian food is known for its bold flavors, generous use of spices, and communal dining traditions.</p>
+                <p>Whether you're cooking for a special celebration or a casual family dinner, these recipes will transport you to the vibrant streets and homes of Nigeria.</p>
+            </div>
+        </section>
+
+        <section class="recent-views hidden" id="recent-section">
+            <h2>Recently Viewed</h2>
+            <div class="recent-grid" id="recent-dishes">
+                <!-- Dynamically loaded from local storage -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Naija Food Hub</h3>
+                <p>Bringing authentic Nigerian cuisine to the world</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#video" id="video-link">Video Demo</a></li>
+                    <li><a href="siteplan.html">Site Plan</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentyear"></span> Naija Food Hub | David Okocha | WDD 231 Final Project</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+    <!-- Modal for recipe details -->
+    <div id="recipe-modal" class="modal" role="dialog" aria-label="Recipe details" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div id="modal-body">
+                <!-- Dynamically loaded recipe details -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigerian Recipes - Naija Food Hub</title>
+    <meta name="description"
+        content="Browse our collection of authentic Nigerian recipes. Filter by category, region, or difficulty. Save your favorites and discover new dishes.">
+    <meta name="author" content="David Okocha">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Nigerian Recipes - Naija Food Hub">
+    <meta property="og:description"
+        content="Browse our collection of authentic Nigerian recipes. Discover Jollof Rice, Egusi Soup, Suya, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://monarchcorps.github.io/wdd231/final/recipes.html">
+    <meta property="og:image" content="https://monarchcorps.github.io/wdd231/final/images/jollof_rice.webp">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nigerian Recipes - Naija Food Hub">
+    <meta name="twitter:description" content="Browse our collection of authentic Nigerian recipes.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>🇳🇬 Naija Food Hub</h1>
+                <p class="tagline">Taste of Nigeria</p>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav id="nav">
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html" class="active" aria-current="page">Recipes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <h2>Nigerian Recipe Collection</h2>
+            <p>Explore <span id="recipe-count">18</span> authentic dishes from across Nigeria</p>
+        </section>
+
+        <section class="filters">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="category-filter">Category:</label>
+                    <select id="category-filter" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="Main Course">Main Course</option>
+                        <option value="Soup">Soup</option>
+                        <option value="Street Food">Street Food</option>
+                        <option value="Side Dish">Side Dish</option>
+                        <option value="Snack">Snack</option>
+                        <option value="Breakfast">Breakfast</option>
+                        <option value="Appetizer">Appetizer</option>
+                        <option value="Swallow">Swallow</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="region-filter">Region:</label>
+                    <select id="region-filter" class="filter-select">
+                        <option value="all">All Regions</option>
+                        <option value="All Regions">All Regions</option>
+                        <option value="West Africa">West Africa</option>
+                        <option value="Southern Nigeria">Southern Nigeria</option>
+                        <option value="Northern Nigeria">Northern Nigeria</option>
+                        <option value="Western Nigeria">Western Nigeria</option>
+                        <option value="Eastern Nigeria">Eastern Nigeria</option>
+                        <option value="South-South Nigeria">South-South Nigeria</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="difficulty-filter">Difficulty:</label>
+                    <select id="difficulty-filter" class="filter-select">
+                        <option value="all">All Levels</option>
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
+                    </select>
+                </div>
+                <button id="reset-filters" class="reset-button">Reset Filters</button>
+            </div>
+        </section>
+
+        <section class="recipes-section">
+            <div class="recipes-grid" id="recipes-grid">
+                <!-- Dynamically loaded recipes -->
+            </div>
+            <div id="no-results" class="no-results hidden">
+                <p>No recipes found matching your filters. Try adjusting your selection.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Naija Food Hub</h3>
+                <p>Bringing authentic Nigerian cuisine to the world</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#video" id="video-link">Video Demo</a></li>
+                    <li><a href="siteplan.html">Site Plan</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentyear"></span> Naija Food Hub | David Okocha | WDD 231 Final Project</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+    <!-- Modal for recipe details -->
+    <div id="recipe-modal" class="modal" role="dialog" aria-label="Recipe details" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div id="modal-body">
+                <!-- Dynamically loaded recipe details -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js" type="module"></script>
+</body>
+
+</html>

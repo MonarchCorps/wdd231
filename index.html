@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Web Frontend Development 1</title>
+    <meta name="description"
+        content="WDD 231 - Web Frontend Development 1 by David Okocha. Explore my GitHub Profile, LinkedIn, Chamber of Commerce Website">
+    <meta name="author" content="David Okocha">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <img src="images/profile.jpeg" alt="Profile Picture" width="360" height="800">
+            <p>David Okocha</p>
+        </div>
+
+        <div class="menu-icon" id="menuToggle" role="button" aria-label="Toggle navigation menu" aria-expanded="false" tabindex="0">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+    <nav>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#">Home</a></li>
+            <li><a href="chamber/index.html">Chamber</a></li>
+            <li><a href="final/index.html">Final</a></li>
+            <li><a href="https://github.com/">GitHub Profile</a></li>
+            <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+        </ul>
+    </nav>
+    <main class="grid">
+        <h1>WDD 231 - Web Frontend Development 1</h1>
+        <div class="main">
+            <section class="course">
+                <h2>Course Work</h2>
+                <div class="course-info">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="country">
+                <h2>Lagos,Nigeria</h2>
+                <div class="country-image">
+                    <img src="images/waterfall.webp" alt="Waterfall in Lagos, Nigeria" width="1280" height="720">
+                </div>
+                <p>Waterfall</p>
+            </section>
+        </div>
+        <section class="certificate">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" id="all-btn">All</button>
+                <button class="filter-btn" id="wdd-btn">WDD</button>
+                <button class="filter-btn" id="cse-btn">CSE</button>
+            </div>
+
+            <div class="credit-counter" id="credit-counter">
+                Total credits: 0
+            </div>
+
+            <div class="courses-grid" id="courses-grid">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="last-block">
+                <p>&copy;<span id="currentyear"></span>David Okocha, Nigeria</p>
+                <img src="images/flag.webp" alt="Nigerian flag" width="500" height="302">
+            </div>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+    <script src="./scripts/navigation.js" defer></script>
+    <script src="./scripts/dates.js" defer></script>
+    <script src="./scripts/course.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+[
+  {
+    "name": "LagTech Solutions",
+    "tagline": "Powering Lagos with Smart Technology",
+    "address": "14 Broad Street, Lagos Island, Lagos",
+    "phone": "(234) 801-234-5678",
+    "website": "https://lagtech.example.com",
+    "image": "lagtech.webp",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Eko Maritime Logistics",
+    "tagline": "Reliable Freight & Shipping Across West Africa",
+    "address": "7 Apapa Wharf Road, Apapa, Lagos",
+    "phone": "(234) 802-345-6789",
+    "website": "https://ekologistics.example.com",
+    "image": "eko-maritime.webp",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Victoria Island Spa & Wellness",
+    "tagline": "Relax, Rejuvenate, Recharge",
+    "address": "22 Adeola Odeku Street, Victoria Island, Lagos",
+    "phone": "(234) 803-456-7890",
+    "website": "https://vispawellness.example.com",
+    "image": "vi-spa.webp",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Surulere Art Gallery",
+    "tagline": "Celebrating African Art & Culture",
+    "address": "5 Adeniran Ogunsanya Street, Surulere, Lagos",
+    "phone": "(234) 804-567-8901",
+    "website": "https://surulereartgallery.example.com",
+    "image": "surulere-art.webp",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Lekki Fresh Market",
+    "tagline": "Farm-to-Table Produce Every Day",
+    "address": "10 Lekki-Epe Expressway, Lekki Phase 1, Lagos",
+    "phone": "(234) 805-678-9012",
+    "website": "https://lekkifreshmarket.example.com",
+    "image": "lekki-market.webp",
+    "membershipLevel": 1
+  },
+  {
+    "name": "Ikeja Auto Hub",
+    "tagline": "Sales, Service & Spare Parts You Trust",
+    "address": "33 Allen Avenue, Ikeja, Lagos",
+    "phone": "(234) 806-789-0123",
+    "website": "https://ikejaautohub.example.com",
+    "image": "ikeja-auto.webp",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Yaba Digital Academy",
+    "tagline": "Training Tomorrow's Tech Leaders Today",
+    "address": "18 Herbert Macaulay Way, Yaba, Lagos",
+    "phone": "(234) 807-890-1234",
+    "website": "https://yabadigital.example.com",
+    "image": "yaba-digital.webp",
+    "membershipLevel": 3
+  }
+]
