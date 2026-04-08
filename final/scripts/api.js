@@ -1,35 +1,44 @@
-const API_URL = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=Nigerian';
+const THEMEALDB_URL = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=Nigerian';
+
 const LOCAL_DATA_URL = 'data/nigerian-dishes.json';
 
 export async function fetchRecipes() {
     try {
-        const response = await fetch(API_URL);
+        const apiResponse = await fetch(THEMEALDB_URL);
 
-        if (!response.ok) {
-            throw new Error(`API request failed with status ${response.status}`);
+        if (!apiResponse.ok) {
+            throw new Error(`TheMealDB responded with HTTP ${apiResponse.status}`);
         }
 
-        const data = await response.json();
+        const apiData = await apiResponse.json();
 
-        if (data.meals && data.meals.length > 0) {
-            console.log(`API returned ${data.meals.length} recipes`);
+        if (!apiData.meals || apiData.meals.length === 0) {
+            throw new Error(
+                'TheMealDB returned no results for "Nigerian" — ' +
+                'this cuisine area is not in their database. Using local data.'
+            );
         }
 
-        throw new Error('Using local data for complete recipe details');
+        console.log(`TheMealDB returned ${apiData.meals.length} meals.`);
+        return apiData.meals;
 
     } catch (error) {
-        try {
-            const response = await fetch(LOCAL_DATA_URL);
+        console.warn('External API unavailable:', error.message);
+        console.info('Loading from local JSON data source...');
 
-            if (!response.ok) {
-                throw new Error(`Local data fetch failed with status ${response.status}`);
+        try {
+            const localResponse = await fetch(LOCAL_DATA_URL);
+
+            if (!localResponse.ok) {
+                throw new Error(`Local data fetch failed with HTTP ${localResponse.status}`);
             }
 
-            const data = await response.json();
-            return data.dishes;
+            const localData = await localResponse.json();
+            console.log(`Successfully loaded ${localData.dishes.length} recipes from local data.`);
+            return localData.dishes;
 
         } catch (localError) {
-            console.error('Failed to load recipes from local data:', localError);
+            console.error('All data sources failed. No recipes available.', localError);
             return [];
         }
     }
