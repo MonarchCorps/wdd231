@@ -4,30 +4,30 @@ const LOCAL_DATA_URL = 'data/nigerian-dishes.json';
 export async function fetchRecipes() {
     try {
         const response = await fetch(API_URL);
-        
+
         if (!response.ok) {
             throw new Error(`API request failed with status ${response.status}`);
         }
-        
+
         const data = await response.json();
-        
+
         if (data.meals && data.meals.length > 0) {
             console.log(`API returned ${data.meals.length} recipes`);
         }
-        
+
         throw new Error('Using local data for complete recipe details');
-        
+
     } catch (error) {
         try {
             const response = await fetch(LOCAL_DATA_URL);
-            
+
             if (!response.ok) {
                 throw new Error(`Local data fetch failed with status ${response.status}`);
             }
-            
+
             const data = await response.json();
             return data.dishes;
-            
+
         } catch (localError) {
             console.error('Failed to load recipes from local data:', localError);
             return [];
@@ -56,19 +56,19 @@ export function filterByDifficulty(recipes, difficulty) {
 
 export function applyFilters(recipes, filters) {
     let filtered = [...recipes];
-    
+
     if (filters.category && filters.category !== 'all') {
         filtered = filterByCategory(filtered, filters.category);
     }
-    
+
     if (filters.region && filters.region !== 'all') {
         filtered = filterByRegion(filtered, filters.region);
     }
-    
+
     if (filters.difficulty && filters.difficulty !== 'all') {
         filtered = filterByDifficulty(filtered, filters.difficulty);
     }
-    
+
     return filtered;
 }
 

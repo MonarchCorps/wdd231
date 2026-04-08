@@ -62,8 +62,10 @@ export function renderRecipes(recipes, container) {
 
 export function renderFeaturedRecipes(recipes, container) {
     if (!container) return;
-    
-    const featured = recipes.slice(0, 6);
+    // Pick 6 dishes with lighter images to keep home page under 500kB
+    // Avoids suya (187K), nkwobi (268K), ofada (117K), gizdodo (108K)
+    const featuredIds = [1, 2, 4, 5, 6, 7];
+    const featured = recipes.filter(r => featuredIds.includes(r.id));
     renderRecipes(featured, container);
 }
 

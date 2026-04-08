@@ -1,20 +1,12 @@
-// form.js - Form handling and validation
-// ES Module for contact form functionality
-
 import { saveFormDraft, getFormDraft, clearFormDraft } from './storage.js';
 
-/**
- * Initialize form functionality
- */
 export function initForm() {
     const form = document.getElementById('contact-form');
     
-    if (!form) return; // Not on contact page
+    if (!form) return;
     
-    // Load draft data if exists
     loadFormDraft(form);
     
-    // Save draft as user types
     setupAutosave(form);
     
     // Form submission
@@ -29,20 +21,10 @@ export function initForm() {
     }
 }
 
-/**
- * Handle form submission
- * @param {Event} e - Submit event
- */
 function handleSubmit(e) {
-    // Form will submit via GET method to thankyou.html
-    // Clear draft on successful submission
     clearFormDraft();
 }
 
-/**
- * Setup autosave functionality
- * @param {HTMLFormElement} form - Form element
- */
 function setupAutosave(form) {
     const inputs = form.querySelectorAll('input, select, textarea');
     
@@ -54,11 +36,6 @@ function setupAutosave(form) {
     });
 }
 
-/**
- * Get form data as object
- * @param {HTMLFormElement} form - Form element
- * @returns {Object} Form data object
- */
 function getFormData(form) {
     const formData = new FormData(form);
     const data = {};
@@ -70,16 +47,11 @@ function getFormData(form) {
     return data;
 }
 
-/**
- * Load form draft from storage
- * @param {HTMLFormElement} form - Form element
- */
 function loadFormDraft(form) {
     const draft = getFormDraft();
     
     if (!draft) return;
     
-    // Populate form fields with draft data
     Object.keys(draft).forEach(key => {
         const input = form.querySelector(`[name="${key}"]`);
         
@@ -93,15 +65,11 @@ function loadFormDraft(form) {
     });
 }
 
-/**
- * Initialize thank you page
- */
 export function initThankYouPage() {
     const formDataContainer = document.getElementById('form-data');
     
-    if (!formDataContainer) return; // Not on thank you page
+    if (!formDataContainer) return;
     
-    // Get URL parameters
     const params = new URLSearchParams(window.location.search);
     
     if (params.toString() === '') {
@@ -109,16 +77,10 @@ export function initThankYouPage() {
         return;
     }
     
-    // Display form data using template literals
     const dataHTML = createSubmissionDataHTML(params);
     formDataContainer.innerHTML = dataHTML;
 }
 
-/**
- * Create HTML for submission data display
- * @param {URLSearchParams} params - URL search parameters
- * @returns {string} HTML string
- */
 function createSubmissionDataHTML(params) {
     const fieldLabels = {
         name: 'Full Name',
@@ -147,12 +109,6 @@ function createSubmissionDataHTML(params) {
     return html;
 }
 
-/**
- * Format value for display
- * @param {string} key - Field key
- * @param {string} value - Field value
- * @returns {string} Formatted value
- */
 function formatValue(key, value) {
     if (key === 'subject') {
         return formatSubject(value);
@@ -169,11 +125,6 @@ function formatValue(key, value) {
     return value || 'Not provided';
 }
 
-/**
- * Format subject value
- * @param {string} value - Subject value
- * @returns {string} Formatted subject
- */
 function formatSubject(value) {
     const subjects = {
         'recipe-submission': 'Recipe Submission',
@@ -187,11 +138,6 @@ function formatSubject(value) {
     return subjects[value] || value;
 }
 
-/**
- * Format region value
- * @param {string} value - Region value
- * @returns {string} Formatted region
- */
 function formatRegion(value) {
     const regions = {
         'northern': 'Northern Nigeria',
@@ -206,9 +152,6 @@ function formatRegion(value) {
     return regions[value] || value || 'Not specified';
 }
 
-/**
- * Add custom validation messages
- */
 export function setupFormValidation() {
     const form = document.getElementById('contact-form');
     
